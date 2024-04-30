@@ -12,7 +12,7 @@
 - sudo su - postgres
 - psql
 - \password
-- enter your password
+- enter your password: password
 - \q
 - exit
 ## node installation
@@ -28,7 +28,7 @@
 **- sudo vi .env**
   - MODE=production
   - PORT=8080
-  - DATABASE_URL=postgresql://postgres:your-password@localhost:5432/postgres  
+  - DATABASE_URL=postgresql://postgres:password@localhost:5432/postgres  
 - npm install
 - sudo npm install -g pm2
 - sudo npx prisma db push
