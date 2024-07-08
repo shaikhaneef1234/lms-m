@@ -28,6 +28,11 @@ pipeline {
                 sh 'docker rmi -f mubeen507/frontend'
               }
           }
+	stage('Remove old container') {
+            steps {
+                sh 'docker container rm web -f'
+              }
+          }
         stage('Docker run'){
             steps{
                 sh 'docker container run -dt --name web -p 80:80 mubeen507/frontend'
